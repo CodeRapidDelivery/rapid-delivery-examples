@@ -16,7 +16,7 @@ public class SwitchStatement {
                 System.out.println("Relax");
                 break;
             case SATURDAY:
-                System.out.println("go to the Swimming pool");
+                System.out.println("Go to the Swimming pool");
         }
 
         switch (day) {
@@ -29,7 +29,7 @@ public class SwitchStatement {
             case MONDAY, WEDNESDAY, FRIDAY -> "Go to the gym";
             case TUESDAY, THURSDAY, SUNDAY -> "Relax";
             case SATURDAY -> "Go to the swimming pool";
-            default -> "no activity";
+//            default -> "no activity";
         };
     }
 }
