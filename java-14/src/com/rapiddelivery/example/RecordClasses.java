@@ -2,6 +2,8 @@ package com.rapiddelivery.example;
 
 public class RecordClasses {
     public static void main(String[] args) {
-        System.out.println(new Person("John", "Terry", 40   ));
+        final Person person = new Person("John", "Terry", 40);
+
+        System.out.println(person.age());
     }
 }
