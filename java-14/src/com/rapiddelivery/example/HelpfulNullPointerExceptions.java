@@ -11,7 +11,7 @@ public class HelpfulNullPointerExceptions {
 }
 
 class UserService {
-    private final List<User> users = List.of(null, new User(1L, "John"));
+    private final List<User> users = List.of(new User(0L, null), new User(1L, "John"));
 
     User getUser(long id) {
         return users.stream()
