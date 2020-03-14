@@ -42,7 +42,7 @@ public class SwitchStatement {
                 System.out.println(activity);
                 break;
             case SATURDAY:
-                /* TODO cannot do that
+                /* In old block you cannot have the same names of variables
                 String activity = "Relax";*/
                 System.out.println("Go to the swimming pool");
         }
