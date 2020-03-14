@@ -11,9 +11,9 @@ public class TextBlocks {
         );
         System.out.println(
                 """
-                Here is the text
+                "Here is the text
                     Here is the indention
-                And Back
+                And Back"
             """
         );
 
@@ -23,6 +23,16 @@ public class TextBlocks {
                 in one \
                 Line \
                 """
+        );
+
+        System.out.println(
+                """
+                {
+                    id: %s,
+                    name: %s,
+                    age: %d
+                }
+                """.formatted("1", "John", 1)
         );
     }
 }
