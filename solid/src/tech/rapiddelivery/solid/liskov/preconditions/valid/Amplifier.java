@@ -1,7 +1,6 @@
 package tech.rapiddelivery.solid.liskov.preconditions.valid;
 
 import java.util.Optional;
-import java.util.function.Function;
 
 abstract class Amplifier {
     private final int gainFactor;
@@ -10,15 +9,14 @@ abstract class Amplifier {
         gainFactor = factor;
     }
 
-    abstract Function<Integer, Optional<String>> checkInputForErrors();
+    abstract Optional<String> checkForErrors(int number);
 
-    public int execute(int input) {
-        checkInputForErrors()
-                .apply(input)
+    public int execute(int number) {
+        checkForErrors(number)
                 .ifPresent((m) -> {
                     throw new IllegalStateException(m);
                 });
 
-        return gainFactor * input;
+        return gainFactor * number;
     }
 }

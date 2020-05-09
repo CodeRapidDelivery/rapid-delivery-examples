@@ -1,6 +1,6 @@
 package tech.rapiddelivery.solid.liskov.square.violation;
 
-
+// -ea you should run the program with
 class Main {
     public static void main(String[] args) {
         final Rectangle[] rectangles = {
@@ -12,14 +12,11 @@ class Main {
         setArea(new Square(), 5, 6);
     }
 
-    private static void setArea(
-            Rectangle rectangle,
-            double width,
-            double height
-    ) {
+    private static void setArea(Rectangle rectangle, double width, double height) {
         rectangle.setHeight(width);
         rectangle.setWidth(height);
-        assert rectangle.area() == 30;
+        assert 1 == 2;
+        assert  rectangle.area() == height * width;
     }
 }
 

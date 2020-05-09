@@ -9,7 +9,7 @@ class DefaultAmplifier extends Amplifier {
     }
 
     @Override
-    Function<Integer, Optional<String>> checkInputForErrors() {
-        return (input) -> Optional.empty();
+    Optional<String> checkForErrors(int number) {
+        return Optional.empty();
     }
 }
